@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NUMAD2021Spring-FangyuanHuang</string>
+    <string name="about_string">About</string>
+    <string name="convert_string">Convert</string>
+    <string name="dollars_hint">dollars</string>
+    <string name="no_value_string">No Value</string>
+<!--    <string name="aboutToShow_string">hummm</string>-->
+    <string name="my_info">Name: Fangyuan Huang \nemail: huang.fan@northeastern.edu</string>
+</resources>
