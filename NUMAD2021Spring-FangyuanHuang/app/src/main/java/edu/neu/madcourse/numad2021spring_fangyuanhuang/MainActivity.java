@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void convertCurrency(View view) {
         EditText dollarText = findViewById(R.id.dollarText);
-        TextView textView = findViewById(R.id.textView);
+        TextView textView = findViewById(R.id.converResult);
 
         if (!dollarText.getText().toString().equals("")) {
             float dollarValue = Float.valueOf(dollarText.getText().toString());
