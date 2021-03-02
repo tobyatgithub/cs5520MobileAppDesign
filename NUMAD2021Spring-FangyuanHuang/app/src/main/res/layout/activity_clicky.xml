@@ -9,68 +9,79 @@
         android:id="@+id/E"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginTop="124dp"
         android:onClick="ClickyClickE"
         android:text="E"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/BtnB"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/BtnF"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="48dp"
-        android:text="F"
         android:onClick="ClickyClickF"
+        android:text="F"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnC"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/BtnD"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="124dp"
-        android:text="D"
         android:onClick="ClickyClickD"
+        android:text="D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/BtnA"
+        app:layout_constraintVertical_bias="0.057" />
 
     <Button
         android:id="@+id/BtnC"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="48dp"
-        android:text="C"
         android:onClick="ClickyClickC"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
     <Button
         android:id="@+id/BtnB"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginTop="48dp"
-        android:text="B"
         android:onClick="ClickyClickB"
+        android:text="B"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
     <Button
         android:id="@+id/BtnA"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
-        android:text="A"
         android:onClick="ClickyClickA"
+        android:text="A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
     <TextView
         android:id="@+id/ClickyText"
