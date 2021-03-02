@@ -14,6 +14,8 @@ public class Clicky extends AppCompatActivity {
         setContentView(R.layout.activity_clicky);
     }
 
+    //TODO: refactor these functions use switch&case (OnClick Listener demo)
+    // https://www.youtube.com/watch?v=76HXJfojAvs&feature=youtu.be
     public void ClickyClickA(View view) {
         TextView ClickyText = findViewById(R.id.ClickyText);
         ClickyText.setText("Pressed: A");
