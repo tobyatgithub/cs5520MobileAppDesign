@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -16,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 
 public class LinkCollector extends AppCompatActivity {
@@ -96,14 +93,10 @@ public class LinkCollector extends AppCompatActivity {
         builder.setTitle("Add a website with its URL");
 
         // two input layout
-//        LayoutInflater factory = LayoutInflater.from(this);
-//        final View textEntryView = factory.inflate(R.layout.item_card, null);
         LinearLayout textEntryView = new LinearLayout(this);
         textEntryView.setOrientation(LinearLayout.VERTICAL);
         final EditText nameInput = new EditText(this);
         final EditText urlInput = new EditText(this);
-//        final EditText nameInput = (EditText) textEntryView.findViewById(R.id.item_name);
-//        final EditText urlInput = (EditText) textEntryView.findViewById(R.id.item_url);
         nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
         nameInput.setHint("Type in name");
         urlInput.setInputType(InputType.TYPE_TEXT_VARIATION_URI);
@@ -132,6 +125,6 @@ public class LinkCollector extends AppCompatActivity {
             }
         });
         builder.show();
-        rviewAdapter.notifyDataSetChanged();
+        rviewAdapter.notifyDataSetChanged(); // not sure whether this line is needed or not.
     }
 }

@@ -30,7 +30,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:textSize="12sp"
-            android:text="URL" />
+            android:text="URL"
+            android:autoLink="web"/>
 
     </RelativeLayout>
 
