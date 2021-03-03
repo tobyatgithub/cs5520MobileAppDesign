@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Patterns;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -112,10 +114,15 @@ public class LinkCollector extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 String nameText = nameInput.getText().toString();
                 String urlText = urlInput.getText().toString();
-                LinkCollectorItemCard itemCard = new LinkCollectorItemCard(nameText, urlText);
-                itemList.add(position, itemCard);
-                rviewAdapter.notifyDataSetChanged();
-                Toast.makeText(LinkCollector.this, "Added a website", Toast.LENGTH_SHORT).show();
+                //check urlText format
+                if (Patterns.WEB_URL.matcher(urlText).matches()) {
+                    LinkCollectorItemCard itemCard = new LinkCollectorItemCard(nameText, urlText);
+                    itemList.add(position, itemCard);
+                    Toast.makeText(LinkCollector.this, "Added a website", Toast.LENGTH_SHORT).show();
+                } else {
+//                    urlInput.setError("Please enter a valid URL");
+                    Toast.makeText(LinkCollector.this, "ERROR: Please enter a valid URL", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
