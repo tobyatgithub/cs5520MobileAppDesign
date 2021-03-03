@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnClicky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="goToClickyActivity"
@@ -42,22 +42,36 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
+        android:id="@+id/btnLinkCollector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="40dp"
         android:onClick="goToLickCollector"
         android:text="Link Collector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnClicky"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnLocator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="goToLocator"
+        android:text="Find Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLinkCollector"
         app:layout_constraintVertical_bias="0.0" />
 
 
-        />
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

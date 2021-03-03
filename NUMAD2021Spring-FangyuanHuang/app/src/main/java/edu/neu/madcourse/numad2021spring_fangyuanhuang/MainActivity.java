@@ -37,4 +37,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LinkCollector.class);
         startActivity(intent);
     }
+
+    public void goToLocator(View view) {
+        Intent intent = new Intent(this, LocatorActivity.class);
+        startActivity(intent);
+    }
 }
