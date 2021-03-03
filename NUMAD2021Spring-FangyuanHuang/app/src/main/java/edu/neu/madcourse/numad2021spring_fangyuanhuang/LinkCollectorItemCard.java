@@ -1,5 +1,7 @@
 package edu.neu.madcourse.numad2021spring_fangyuanhuang;
 
+import android.util.Log;
+
 public class LinkCollectorItemCard implements ItemClickListener {
     private final String itemName;
     private final String itemURL;
@@ -20,5 +22,6 @@ public class LinkCollectorItemCard implements ItemClickListener {
     @Override
     public void onItemClick(int position) {
         // TODO: link to website
+        Log.i("hmmm..", "maybe...do something?");
     }
 }

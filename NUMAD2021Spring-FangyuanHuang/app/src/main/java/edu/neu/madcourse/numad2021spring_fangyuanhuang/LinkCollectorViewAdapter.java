@@ -30,14 +30,15 @@ public class LinkCollectorViewAdapter extends RecyclerView.Adapter<LinkCollector
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LinkCollectorViewHolder holder, int position) {
+    public void onBindViewHolder(LinkCollectorViewHolder holder, int position) {
         LinkCollectorItemCard currentItem = itemList.get(position);
+
         holder.itemName.setText(currentItem.getItemName());
         holder.itemURL.setText(currentItem.getItemURL());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return itemList.size();
     }
 }

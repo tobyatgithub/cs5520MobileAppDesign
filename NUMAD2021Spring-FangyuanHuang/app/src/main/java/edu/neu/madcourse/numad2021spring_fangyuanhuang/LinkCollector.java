@@ -4,11 +4,11 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,21 +27,6 @@ public class LinkCollector extends AppCompatActivity {
     private LinkCollectorViewAdapter rviewAdapter;
     private RecyclerView.LayoutManager rLayoutManager;
     private FloatingActionButton addButton;
-//
-//    private FloatingActionButton fab;
-//    ArrayAdapter<String> adapter;
-//    private ListView myListView;
-//    private String m_Text = "";
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        myListView = findViewById(R.id.listView);
-//        adapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_list_item_1,
-//                listItems);
-//        myListView.setAdapter(adapter);
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,15 +43,6 @@ public class LinkCollector extends AppCompatActivity {
                 addItem(pos);
             }
         });
-//        fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                addListItem();
-//                Snackbar.make(view, "Item added to list",
-//                        Snackbar.LENGTH_LONG).setAction("Action", null).show();
-//            }
-//        });
     }
 
     private void init(Bundle savedInstanceState) {
@@ -117,17 +93,27 @@ public class LinkCollector extends AppCompatActivity {
 
     private void addItem(int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("title");
+        builder.setTitle("Add a website with its URL");
 
-        LayoutInflater factory = LayoutInflater.from(this);
-        final View textEntryView = factory.inflate(R.layout.item_card, null);
-        final EditText nameInput = (EditText) textEntryView.findViewById(R.id.item_name);
-        final EditText urlInput = (EditText) textEntryView.findViewById(R.id.item_url);
+        // two input layout
+//        LayoutInflater factory = LayoutInflater.from(this);
+//        final View textEntryView = factory.inflate(R.layout.item_card, null);
+        LinearLayout textEntryView = new LinearLayout(this);
+        textEntryView.setOrientation(LinearLayout.VERTICAL);
+        final EditText nameInput = new EditText(this);
+        final EditText urlInput = new EditText(this);
+//        final EditText nameInput = (EditText) textEntryView.findViewById(R.id.item_name);
+//        final EditText urlInput = (EditText) textEntryView.findViewById(R.id.item_url);
         nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
+        nameInput.setHint("Type in name");
         urlInput.setInputType(InputType.TYPE_TEXT_VARIATION_URI);
+        urlInput.setHint("Type in URL");
         urlInput.setLinksClickable(true);
+        textEntryView.addView(nameInput);
+        textEntryView.addView(urlInput);
         builder.setView(textEntryView);
 
+        // onClick OK
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -136,7 +122,7 @@ public class LinkCollector extends AppCompatActivity {
                 LinkCollectorItemCard itemCard = new LinkCollectorItemCard(nameText, urlText);
                 itemList.add(position, itemCard);
                 rviewAdapter.notifyDataSetChanged();
-                Toast.makeText(LinkCollector.this, "Add an item", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LinkCollector.this, "Added a website", Toast.LENGTH_SHORT).show();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -146,6 +132,6 @@ public class LinkCollector extends AppCompatActivity {
             }
         });
         builder.show();
-
+        rviewAdapter.notifyDataSetChanged();
     }
 }
