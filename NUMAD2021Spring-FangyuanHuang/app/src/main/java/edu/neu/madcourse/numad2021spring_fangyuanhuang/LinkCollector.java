@@ -18,8 +18,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class LinkCollector extends AppCompatActivity {
-//    private static final String NUMBER_OF_ITEMS = "NUMBER_OF_ITEMS";
-//    private static final String KEY_OF_INSTANCE = "KEY_OF_INSTANCE";
     private ArrayList<LinkCollectorItemCard> itemList = new ArrayList<LinkCollectorItemCard>();
     private RecyclerView recyclerView;
     private LinkCollectorViewAdapter rviewAdapter;
@@ -31,7 +29,6 @@ public class LinkCollector extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linkcollect);
 
-//        init(savedInstanceState);
         createRecyclerView();
 
         addButton = findViewById(R.id.addButton);
@@ -43,32 +40,6 @@ public class LinkCollector extends AppCompatActivity {
             }
         });
     }
-
-//    private void init(Bundle savedInstanceState) {
-//        initialItemData(savedInstanceState);
-//        createRecyclerView();
-//    }
-//
-//    private void initialItemData(Bundle savedInstanceState) {
-//        // not the first time to open this activity
-//        if (savedInstanceState != null && savedInstanceState.containsKey(NUMBER_OF_ITEMS)) {
-//            int size = savedInstanceState.getInt(NUMBER_OF_ITEMS);
-//
-//            for (int i = 0; i < size; i++) {
-//                Integer imgId = savedInstanceState.getInt(KEY_OF_INSTANCE + i + "0");
-//                String ItemName = savedInstanceState.getString(KEY_OF_INSTANCE + i + "1");
-//                String ItemURL =  savedInstanceState.getString(KEY_OF_INSTANCE + i + "2");
-//
-//                LinkCollectorItemCard itemCard = new LinkCollectorItemCard(ItemName, ItemURL);
-//                itemList.add(itemCard);
-//            }
-//        }
-//        // first time to open this activity
-//        else {
-//            // TODO: seems not needed in our case.
-//        }
-//
-//    }
 
     private void createRecyclerView() {
         rLayoutManager = new LinearLayoutManager(this);
@@ -121,7 +92,6 @@ public class LinkCollector extends AppCompatActivity {
                     Toast.makeText(LinkCollector.this, "Added a website", Toast.LENGTH_SHORT).show();
                     rviewAdapter.notifyDataSetChanged();
                 } else {
-//                    urlInput.setError("Please enter a valid URL");
                     Toast.makeText(LinkCollector.this, "ERROR: Please enter a valid URL", Toast.LENGTH_SHORT).show();
                 }
             }

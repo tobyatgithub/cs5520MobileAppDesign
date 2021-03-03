@@ -21,7 +21,5 @@ public class LinkCollectorItemCard implements ItemClickListener {
 
     @Override
     public void onItemClick(int position) {
-//        // TODO: link to website
-//        Log.i("hmmm..", "maybe...do something?");
     }
 }
