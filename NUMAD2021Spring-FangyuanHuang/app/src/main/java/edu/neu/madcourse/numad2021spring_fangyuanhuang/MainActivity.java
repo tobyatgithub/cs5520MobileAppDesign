@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Locale;
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void showAbout(View view) {
@@ -26,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToClickyActivity(View view) {
         Intent intent = new Intent(this, Clicky.class);
+        startActivity(intent);
+    }
+
+    public void goToLickCollector(View view) {
+        Intent intent = new Intent(this, LinkCollector.class);
         startActivity(intent);
     }
 }
