@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
-public class LinkCollector extends AppCompatActivity {
+public class LinkCollectorActivity extends AppCompatActivity {
     private ArrayList<LinkCollectorItemCard> itemList = new ArrayList<LinkCollectorItemCard>();
     private RecyclerView recyclerView;
     private LinkCollectorViewAdapter rviewAdapter;
@@ -89,10 +89,10 @@ public class LinkCollector extends AppCompatActivity {
                 if (Patterns.WEB_URL.matcher(urlText).matches()) {
                     LinkCollectorItemCard itemCard = new LinkCollectorItemCard(nameText, urlText);
                     itemList.add(position, itemCard);
-                    Toast.makeText(LinkCollector.this, "Added a website", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LinkCollectorActivity.this, "Added a website", Toast.LENGTH_SHORT).show();
                     rviewAdapter.notifyDataSetChanged();
                 } else {
-                    Toast.makeText(LinkCollector.this, "ERROR: Please enter a valid URL", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LinkCollectorActivity.this, "ERROR: Please enter a valid URL", Toast.LENGTH_SHORT).show();
                 }
             }
         });

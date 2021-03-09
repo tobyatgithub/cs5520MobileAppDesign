@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_clip"
@@ -19,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Clicky"
+        <activity android:name=".ClickyActivity"
             android:parentActivityName=".MainActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -27,7 +29,7 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".LinkCollector"
+        <activity android:name=".LinkCollectorActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:parentActivityName=".MainActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -44,6 +46,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <activity
+            android:name="edu.neu.madcourse.numad2021spring_fangyuanhuang.WebServiceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Get Data from Web Service"/>
     </application>
 
 

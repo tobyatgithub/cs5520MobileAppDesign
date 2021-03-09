@@ -5,13 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,18 +22,23 @@ public class MainActivity extends AppCompatActivity {
         AboutString.setText(R.string.my_info);
     }
 
-    public void goToClickyActivity(View view) {
-        Intent intent = new Intent(this, Clicky.class);
+    public void startClickyActivity(View view) {
+        Intent intent = new Intent(this, ClickyActivity.class);
         startActivity(intent);
     }
 
-    public void goToLickCollector(View view) {
-        Intent intent = new Intent(this, LinkCollector.class);
+    public void startLickCollectorActivity(View view) {
+        Intent intent = new Intent(this, LinkCollectorActivity.class);
         startActivity(intent);
     }
 
-    public void goToLocator(View view) {
+    public void startLocatorActivity(View view) {
         Intent intent = new Intent(this, LocatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void startWebServiceActivity(View view) {
+        Intent intent = new Intent(this, WebServiceActivity.class);
         startActivity(intent);
     }
 }
