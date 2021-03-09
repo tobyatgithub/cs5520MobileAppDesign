@@ -35,7 +35,7 @@
         android:id="@+id/btnClicky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToClickyActivity"
+        android:onClick="startClickyActivity"
         android:text="Clicky Clicky"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="goToLickCollector"
+        android:onClick="startLickCollectorActivity"
         android:text="Link Collector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="goToLocator"
+        android:onClick="startLocatorActivity"
         android:text="Find Location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLinkCollector"
         app:layout_constraintVertical_bias="0.0" />
 
-
+    <Button
+        android:id="@+id/btnService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="startWebServiceActivity"
+        android:text="Ping a Web site"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLocator"
+        app:layout_constraintVertical_bias="0.106" />
     />
 
 

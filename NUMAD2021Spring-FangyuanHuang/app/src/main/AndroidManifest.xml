@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Clicky"
+        <activity android:name=".ClickyActivity"
             android:parentActivityName=".MainActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -27,7 +27,7 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".LinkCollector"
+        <activity android:name=".LinkCollectorActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:parentActivityName=".MainActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
